@@ -13,6 +13,9 @@ Clone in plugin directory :
 
 Or download an archive and extract in `plugins/php_thumb`
 
+The master branch is compatible with CakePHP 2.0. For the 1.3 version, use the
+1.3 branch.
+
 Configuration
 -------------
 
