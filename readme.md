@@ -7,11 +7,11 @@ It is configurable for using with images uploaded with MeioUpload.
 Installation
 ------------
 
-Clone in plugin directory :
+From the app root, clone in `Plugin` directory :
 
-    git clone git://github.com/msadouni/cakephp-phpthumb-plugin.git php_thumb
+    git clone git://github.com/msadouni/cakephp-phpthumb-plugin.git Plugin/PhpThumb
 
-Or download an archive and extract in `plugins/php_thumb`
+Or download an archive and extract in `Plugin/PhpThumb`.
 
 The master branch is compatible with CakePHP 2.0. For the 1.3 version, use the
 1.3 branch.
@@ -19,14 +19,14 @@ The master branch is compatible with CakePHP 2.0. For the 1.3 version, use the
 Configuration
 -------------
 
-Create `config/config.php` with the following code :
+Create `Config/config.php` with the following code :
 
     <?php
     $config['PhpThumb']['thumbs_path'] = 'thumbs';
 
-Load `config/config.php` :
+Load `Config/config.php` :
 
-    // config/bootstrap.php
+    // Config/bootstrap.php
     Configure::load('config');
 
 Then create `webroot/thumbs` where the thumbs will be stored.
@@ -42,7 +42,7 @@ since all the thumbnails stuff is done dynamically with this plugin.
 
 In your model :
 
-    var $actsAs = array('MeioUpload.MeioUpload' => array('image'));
+    public $actsAs = array('MeioUpload.MeioUpload' => array('image'));
 
 Add a varchar image field to the model, create `webroot/uploads` with the write
 permissions for you webserver, and you're done.
@@ -55,14 +55,14 @@ If you use a different folder than `uploads`, then add
 
     $config['PhpThumb']['meioupload_path'] = 'my-folder';
 
-to `config/config.php`.
+to `Config/config.php`.
 
 Usage
 -----
 
 Load the helper in `AppController` or in each controller where you want to use the helper :
 
-    var $helpers = array('PhpThumb.PhpThumb');
+    public $helpers = array('PhpThumb.PhpThumb');
 
 ### Normal image
 
