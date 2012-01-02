@@ -26,7 +26,7 @@ class PhpThumbHelper extends HtmlHelper {
     private function set_cache_filename()    {
         ksort($this->options);
         $filename_parts = array();
-        $cacheable_properties = array('src', 'new', 'w', 'h', 'wp', 'hp', 'wl', 'hl', 'ws', 'hs', 'f', 'q', 'sx', 'sy', 'sw', 'sh', 'zc', 'bc', 'bg', 'fltr');
+        $cacheable_properties = array('src', 'new', 'w', 'h', 'wp', 'hp', 'wl', 'hl', 'ws', 'hs', 'f', 'q', 'sx', 'sy', 'sw', 'sh', 'zc', 'bc', 'bg', 'fltr', 'far');
         
         foreach($this->options as $key => $value)    {
             if(in_array($key, $cacheable_properties))    {
