@@ -1,6 +1,6 @@
 <?php
 
-App::uses('Html', 'View/Helper');
+App::uses('HtmlHelper', 'View/Helper');
 
 class PhpThumbHelper extends HtmlHelper {
     
