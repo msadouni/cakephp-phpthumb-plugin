@@ -129,6 +129,8 @@ class PhpThumbHelper extends HtmlHelper {
 
     function generateThumbnail($image, $options) {
         $thumbs_path = Configure::read('PhpThumb.thumbs_path');
+        $thumbs_quality = Configure::read('PhpThumb.q');
+        $options['q'] = $thumbs_quality;
         if (empty($thumbs_path)) {
             return false;
         }

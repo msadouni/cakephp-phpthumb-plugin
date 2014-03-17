@@ -23,11 +23,13 @@ Create `Config/config.php` with the following code :
 
     <?php
     $config['PhpThumb']['thumbs_path'] = 'thumbs';
+    $config['PhpThumb']['q'] = 90;
 
 Load `Config/config.php` :
 
     // Config/bootstrap.php
     Configure::load('config');
+    Configure::load('PhpThumb');
 
 Then create `webroot/thumbs` where the thumbs will be stored.
 You might want to add that folder to your .gitignore.
