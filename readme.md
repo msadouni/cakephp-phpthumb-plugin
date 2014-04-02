@@ -29,7 +29,7 @@ Load `Config/config.php` :
 
     // Config/bootstrap.php
     Configure::load('config');
-    Configure::load('PhpThumb');
+    CakePlugin::load('PhpThumb');
 
 Then create `webroot/thumbs` where the thumbs will be stored.
 You might want to add that folder to your .gitignore.
