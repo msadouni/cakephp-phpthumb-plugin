@@ -57,6 +57,14 @@ class PhpThumbHelper extends HtmlHelper {
     	
         $this->php_thumb = new phpThumb();
         
+        $config = Configure::read('PhpThumb.config');
+
+        if (!empty($config)) {
+            foreach($config as $key => $value) {
+                $this->php_thumb->setParameter("config_{$key}", $value);
+            }
+        }
+
         foreach($this->php_thumb as $var => $value) {
             if(isset($this->options[$var]))    {
                 $this->php_thumb->setParameter($var, $this->options[$var]);

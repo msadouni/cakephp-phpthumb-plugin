@@ -29,6 +29,15 @@ Load `config/config.php` :
 Then create `webroot/thumbs` where the thumbs will be stored.
 You might want to add that folder to your .gitignore.
 
+You can also set configuration variables usually found in `phpThumb.config.php`:
+
+    // Config/config.php
+    $config['PhpThumb']['config'] = array(
+        'allow_src_above_docroot' => true
+    );
+
+For a list of available variables, consult `vendors/phpThumb/phpThumb.config.php.default`.
+
 MeioUpload configuration
 ------------------------
 
